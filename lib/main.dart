@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mobile_labs/lab_pages/lab_1.dart';
 import 'package:mobile_labs/lab_pages/lab_2.dart';
 import 'package:mobile_labs/lab_pages/lab_3.dart';
 import 'package:mobile_labs/lab_pages/lab_4.dart';
@@ -27,6 +28,7 @@ class LabIndexPage extends StatelessWidget {
   LabIndexPage({super.key});
 
   final Map<String, Widget> labPages = {
+    "Lab 1": const Lab1Page(),
     'Lab 2': const Lab2Page(),
     'Lab 3': Lab3Page(),
     'Lab 4': Lab4Page(),
