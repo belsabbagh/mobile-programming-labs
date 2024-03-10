@@ -1,5 +1,4 @@
 import 'dart:convert';
-
 import 'package:crypto/crypto.dart';
 import 'package:uuid/uuid.dart';
 
@@ -29,14 +28,19 @@ class DataService {
   DataService() {
     // Add admin by default
     addUser('admin', 'admin12345', UserRole.admin);
+    addUser('belal', '1234', UserRole.regular);
   }
 
   // Add a user with username, hashed password, and role
   void addUser(String username, String password, UserRole role) {
     final id = _uuid.v4();
     final hashedPassword = _hashPassword(password);
-    final newUser =
-        User(id: id, username: username, password: hashedPassword, role: role);
+    final newUser = User(
+      id: id,
+      username: username,
+      password: hashedPassword,
+      role: role,
+    );
     _users[username] = newUser;
   }
 
