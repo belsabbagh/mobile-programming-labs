@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
 }
 
 class LabIndexPage extends StatelessWidget {
-  LabIndexPage({Key? key});
+  LabIndexPage({super.key});
 
   final Map<String, Widget> labPages = {
     "Lab 1": const Lab1Page(),
