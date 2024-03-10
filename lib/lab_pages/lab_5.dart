@@ -11,11 +11,15 @@ class Lab5Page extends StatelessWidget {
   final TextEditingController confirmPasswordController;
 
   Lab5Page({
-    required this.dataService,
-    required this.usernameController,
-    required this.passwordController,
-    required this.confirmPasswordController,
-  });
+    DataService? dataService,
+    TextEditingController? usernameController,
+    TextEditingController? passwordController,
+    TextEditingController? confirmPasswordController,
+  })  : dataService = dataService ?? DataService(),
+        usernameController = usernameController ?? TextEditingController(),
+        passwordController = passwordController ?? TextEditingController(),
+        confirmPasswordController =
+            confirmPasswordController ?? TextEditingController();
 
   @override
   Widget build(BuildContext context) {

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:mobile_labs/lab_5/data_service.dart';
 import 'package:mobile_labs/lab_pages/lab_1.dart';
 import 'package:mobile_labs/lab_pages/lab_2.dart';
 import 'package:mobile_labs/lab_pages/lab_3.dart';
@@ -34,12 +33,7 @@ class LabIndexPage extends StatelessWidget {
     'Lab 2': const Lab2Page(),
     'Lab 3': Lab3Page(),
     'Lab 4': Lab4Page(),
-    "Lab 5": Lab5Page(
-      dataService: DataService(),
-      usernameController: TextEditingController(),
-      passwordController: TextEditingController(),
-      confirmPasswordController: TextEditingController(),
-    ),
+    "Lab 5": Lab5Page(),
   };
 
   @override
