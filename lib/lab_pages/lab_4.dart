@@ -5,7 +5,7 @@ class BackgroundImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Image.asset(
-      'assets/1339433.png',
+      'assets/images/1339433.png',
       height: 500,
       width: 500,
     );
