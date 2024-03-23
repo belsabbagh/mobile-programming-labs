@@ -5,6 +5,8 @@ import 'package:mobile_labs/expenses_app/expense.dart';
 import 'package:mobile_labs/expenses_app/expenses_services.dart';
 
 class ExpensePage extends StatefulWidget {
+  const ExpensePage({super.key});
+
   @override
   _ExpensePageState createState() => _ExpensePageState();
 }
@@ -35,7 +37,7 @@ class _ExpensePageState extends State<ExpensePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Expense Manager'),
+        title: const Text('Expense Manager'),
       ),
       body: ListView.builder(
         itemCount: _expenses.length,
@@ -48,11 +50,11 @@ class _ExpensePageState extends State<ExpensePage> {
               mainAxisSize: MainAxisSize.min,
               children: [
                 IconButton(
-                  icon: Icon(Icons.delete),
+                  icon: const Icon(Icons.delete),
                   onPressed: () => _deleteExpense(expense.id),
                 ),
                 IconButton(
-                  icon: Icon(Icons.edit),
+                  icon: const Icon(Icons.edit),
                   onPressed: () => _navigateToEditExpensePage(expense),
                 ),
               ],
@@ -62,7 +64,7 @@ class _ExpensePageState extends State<ExpensePage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _navigateToAddExpensePage,
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
       ),
     );
   }
@@ -70,7 +72,7 @@ class _ExpensePageState extends State<ExpensePage> {
   // Method to navigate to create expense page
   void _navigateToAddExpensePage() async {
     await Navigator.of(context).push(
-      MaterialPageRoute(builder: (context) => CreateExpensePage()),
+      MaterialPageRoute(builder: (context) => const CreateExpensePage()),
     );
     _loadExpenses(); // Reload expenses after returning from create expense page
   }

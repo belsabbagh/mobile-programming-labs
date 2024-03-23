@@ -3,6 +3,8 @@ import 'package:mobile_labs/expenses_app/expense.dart';
 import 'package:mobile_labs/expenses_app/expenses_services.dart';
 
 class CreateExpensePage extends StatefulWidget {
+  const CreateExpensePage({super.key});
+
   @override
   _CreateExpensePageState createState() => _CreateExpensePageState();
 }
@@ -20,7 +22,7 @@ class _CreateExpensePageState extends State<CreateExpensePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Add Expense'),
+        title: const Text('Add Expense'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -30,7 +32,7 @@ class _CreateExpensePageState extends State<CreateExpensePage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               TextFormField(
-                decoration: InputDecoration(labelText: 'Title'),
+                decoration: const InputDecoration(labelText: 'Title'),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
                     return 'Please enter a title';
@@ -42,7 +44,7 @@ class _CreateExpensePageState extends State<CreateExpensePage> {
                 },
               ),
               TextFormField(
-                decoration: InputDecoration(labelText: 'Amount'),
+                decoration: const InputDecoration(labelText: 'Amount'),
                 keyboardType: TextInputType.number,
                 validator: (value) {
                   if (value == null || double.tryParse(value) == null) {
@@ -55,7 +57,7 @@ class _CreateExpensePageState extends State<CreateExpensePage> {
                 },
               ),
               TextFormField(
-                decoration: InputDecoration(labelText: 'Date'),
+                decoration: const InputDecoration(labelText: 'Date'),
                 keyboardType: TextInputType.datetime,
                 validator: (value) {
                   if (value == null || DateTime.tryParse(value) == null) {
@@ -67,10 +69,10 @@ class _CreateExpensePageState extends State<CreateExpensePage> {
                   _date = DateTime.parse(value!);
                 },
               ),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
               ElevatedButton(
                 onPressed: _submitForm,
-                child: Text('Save'),
+                child: const Text('Save'),
               ),
             ],
           ),

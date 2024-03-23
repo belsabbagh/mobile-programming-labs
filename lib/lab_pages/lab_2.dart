@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(debugShowCheckedModeBanner: false, home: Lab2Page());
+    return const MaterialApp(debugShowCheckedModeBanner: false, home: Lab2Page());
   }
 }
 
@@ -57,34 +57,34 @@ class ProfileCard extends StatelessWidget {
         ),
         borderRadius: BorderRadius.circular(10), // Choose your border radius
       ),
-      padding: EdgeInsets.all(10), // Optional: Add padding inside the container
+      padding: const EdgeInsets.all(10), // Optional: Add padding inside the container
       child: Column(
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Row(
             children: [
-              Icon(
+              const Icon(
                 Icons.account_circle,
                 size: 50,
               ),
-              SizedBox(width: 10),
+              const SizedBox(width: 10),
               NameAndDescription(
                 name: name,
                 description: description,
               ),
             ],
           ),
-          SizedBox(height: 8),
+          const SizedBox(height: 8),
           Row(
             children: [
               Text(address),
-              Spacer(),
+              const Spacer(),
               Text(phone),
             ],
           ),
-          SizedBox(height: 16),
-          Row(
+          const SizedBox(height: 16),
+          const Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Icon(Icons.accessibility),

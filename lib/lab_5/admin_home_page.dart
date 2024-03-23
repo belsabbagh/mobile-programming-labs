@@ -6,13 +6,13 @@ class AdminHomePage extends StatelessWidget {
   final User admin;
   final DataService dataService;
 
-  AdminHomePage({required this.admin, required this.dataService});
+  const AdminHomePage({super.key, required this.admin, required this.dataService});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Admin Home'),
+        title: const Text('Admin Home'),
       ),
       body: Center(
         child: Column(
@@ -29,7 +29,7 @@ class AdminHomePage extends StatelessWidget {
                           UserListPage(dataService: dataService)),
                 );
               },
-              child: Text('List Users'),
+              child: const Text('List Users'),
             ),
           ],
         ),

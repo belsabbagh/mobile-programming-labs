@@ -5,14 +5,14 @@ import 'package:mobile_labs/lab_5/user_page.dart';
 class UserListPage extends StatelessWidget {
   final DataService dataService;
 
-  UserListPage({required this.dataService});
+  const UserListPage({super.key, required this.dataService});
 
   @override
   Widget build(BuildContext context) {
     List<User> userList = dataService.usersIter().toList();
     return Scaffold(
       appBar: AppBar(
-        title: Text('User List'),
+        title: const Text('User List'),
       ),
       body: ListView.builder(
         itemCount: userList.length,

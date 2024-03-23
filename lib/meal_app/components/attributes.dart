@@ -16,7 +16,7 @@ class BooleanAttribute extends StatelessWidget {
       children: [
         Text(
           '$label: ',
-          style: TextStyle(fontSize: 16, color: Colors.white),
+          style: const TextStyle(fontSize: 16, color: Colors.white),
         ),
         Icon(
           value ? Icons.check_circle : Icons.cancel,

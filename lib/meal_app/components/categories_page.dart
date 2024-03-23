@@ -8,7 +8,7 @@ class CategoryPage extends StatelessWidget {
   final Category category;
   final DataService dataService;
 
-  CategoryPage({required this.category, required this.dataService});
+  const CategoryPage({super.key, required this.category, required this.dataService});
 
   @override
   Widget build(BuildContext context) {

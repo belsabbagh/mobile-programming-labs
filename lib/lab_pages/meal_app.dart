@@ -6,6 +6,8 @@ import 'package:mobile_labs/meal_app/core/data_service.dart';
 import 'package:mobile_labs/meal_app/core/meal.dart';
 
 class CategoryMealWidget extends StatefulWidget {
+  const CategoryMealWidget({super.key});
+
   @override
   _CategoryMealWidgetState createState() => _CategoryMealWidgetState();
 }
@@ -71,8 +73,8 @@ class _CategoryMealWidgetState extends State<CategoryMealWidget> {
 
   GridView _categoriesGridView(List<Category> categories) {
     return GridView.builder(
-      padding: EdgeInsets.all(16),
-      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+      padding: const EdgeInsets.all(16),
+      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2, // You can adjust the cross axis count as needed
         mainAxisSpacing: 16,
         crossAxisSpacing: 16,

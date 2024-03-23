@@ -21,7 +21,6 @@ class DiceRollerPage extends StatefulWidget {
 class _DiceRollerPageState extends State<DiceRollerPage> {
   DiceRoller roller = DiceRoller();
   Image dieFace = Image.file(File("assets/images/dice-1.png"));
-  Color thatPurple = const Color.fromARGB(255, 47, 5, 128);
   void _incrementCounter() {
     setState(() {
       dieFace = roller.rollImg();
@@ -32,8 +31,7 @@ class _DiceRollerPageState extends State<DiceRollerPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text("Dice Roller", style: TextStyle(color: thatPurple)),
+        title: const Text("Dice Roller"),
       ),
       body: Center(
         child: Column(

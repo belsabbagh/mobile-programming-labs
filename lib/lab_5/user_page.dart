@@ -4,13 +4,13 @@ import 'package:mobile_labs/lab_5/data_service.dart';
 class UserProfilePage extends StatelessWidget {
   final User user;
 
-  UserProfilePage({required this.user});
+  const UserProfilePage({super.key, required this.user});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('User Profile'),
+        title: const Text('User Profile'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -19,16 +19,16 @@ class UserProfilePage extends StatelessWidget {
           children: [
             Text(
               'Uuid: ${user.id}',
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
             Text(
               'Username: ${user.username}',
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
-            SizedBox(height: 8),
+            const SizedBox(height: 8),
             Text(
               'Role: ${user.role == UserRole.admin ? 'Admin' : 'Regular'}',
-              style: TextStyle(fontSize: 16),
+              style: const TextStyle(fontSize: 16),
             ),
           ],
         ),

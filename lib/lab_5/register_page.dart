@@ -7,7 +7,7 @@ class RegisterPage extends StatelessWidget {
   final TextEditingController passwordController;
   final TextEditingController confirmPasswordController;
 
-  RegisterPage({
+  const RegisterPage({super.key, 
     required this.dataService,
     required this.usernameController,
     required this.passwordController,
@@ -18,7 +18,7 @@ class RegisterPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Register'),
+        title: const Text('Register'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -27,25 +27,25 @@ class RegisterPage extends StatelessWidget {
           children: [
             TextField(
               controller: usernameController,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 labelText: 'Username',
               ),
             ),
             TextField(
               controller: passwordController,
               obscureText: true,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 labelText: 'Password',
               ),
             ),
             TextField(
               controller: confirmPasswordController,
               obscureText: true,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 labelText: 'Confirm Password',
               ),
             ),
-            SizedBox(height: 16),
+            const SizedBox(height: 16),
             ElevatedButton(
               onPressed: () {
                 final username = usernameController.text;
@@ -61,14 +61,14 @@ class RegisterPage extends StatelessWidget {
                     context: context,
                     builder: (context) {
                       return AlertDialog(
-                        title: Text('Registration Failed'),
-                        content: Text('Passwords do not match.'),
+                        title: const Text('Registration Failed'),
+                        content: const Text('Passwords do not match.'),
                         actions: [
                           TextButton(
                             onPressed: () {
                               Navigator.pop(context);
                             },
-                            child: Text('OK'),
+                            child: const Text('OK'),
                           ),
                         ],
                       );
@@ -76,7 +76,7 @@ class RegisterPage extends StatelessWidget {
                   );
                 }
               },
-              child: Text('Register'),
+              child: const Text('Register'),
             ),
           ],
         ),

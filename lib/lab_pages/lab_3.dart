@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class Lab3Page extends StatefulWidget {
+  const Lab3Page({super.key});
+
   // Renamed from MyHomePage to Lab3Page
   @override
   _Lab3PageState createState() => _Lab3PageState();

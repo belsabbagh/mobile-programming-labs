@@ -10,7 +10,7 @@ class Lab5Page extends StatelessWidget {
   final TextEditingController passwordController;
   final TextEditingController confirmPasswordController;
 
-  Lab5Page({
+  Lab5Page({super.key, 
     DataService? dataService,
     TextEditingController? usernameController,
     TextEditingController? passwordController,
@@ -25,7 +25,7 @@ class Lab5Page extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Login'),
+        title: const Text('Login'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -34,18 +34,18 @@ class Lab5Page extends StatelessWidget {
           children: [
             TextField(
               controller: usernameController,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 labelText: 'Username',
               ),
             ),
             TextField(
               controller: passwordController,
               obscureText: true,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 labelText: 'Password',
               ),
             ),
-            SizedBox(height: 16),
+            const SizedBox(height: 16),
             ElevatedButton(
               onPressed: () {
                 final username = usernameController.text;
@@ -82,14 +82,14 @@ class Lab5Page extends StatelessWidget {
                     context: context,
                     builder: (context) {
                       return AlertDialog(
-                        title: Text('Login Failed'),
-                        content: Text('Invalid username or password.'),
+                        title: const Text('Login Failed'),
+                        content: const Text('Invalid username or password.'),
                         actions: [
                           TextButton(
                             onPressed: () {
                               Navigator.pop(context);
                             },
-                            child: Text('OK'),
+                            child: const Text('OK'),
                           ),
                         ],
                       );
@@ -97,7 +97,7 @@ class Lab5Page extends StatelessWidget {
                   );
                 }
               },
-              child: Text('Login'),
+              child: const Text('Login'),
             ),
             TextButton(
               onPressed: () {
@@ -113,7 +113,7 @@ class Lab5Page extends StatelessWidget {
                   ),
                 );
               },
-              child: Text('Don\'t have an account? Register'),
+              child: const Text('Don\'t have an account? Register'),
             ),
           ],
         ),

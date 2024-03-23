@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'dart:math';
 
 class BackgroundImage extends StatelessWidget {
+  const BackgroundImage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Image.asset(
@@ -13,6 +15,8 @@ class BackgroundImage extends StatelessWidget {
 }
 
 class UserForm extends StatefulWidget {
+  const UserForm({super.key});
+
   @override
   _UserFormState createState() => _UserFormState();
 }
@@ -92,6 +96,8 @@ class _UserFormState extends State<UserForm> {
 }
 
 class Lab4Page extends StatelessWidget {
+  const Lab4Page({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -106,7 +112,7 @@ class Lab4Page extends StatelessWidget {
             colors: [Colors.blue, Colors.green], // Adjust colors as needed
           ),
         ),
-        child: Column(
+        child: const Column(
           children: [
             BackgroundImage(), // Background image widget
             Center(

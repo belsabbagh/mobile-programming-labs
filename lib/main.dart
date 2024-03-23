@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Mobile Programming Labs',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: const ColorScheme.dark(),
         useMaterial3: true,
       ),
       home: LabIndexPage(),
@@ -33,12 +33,12 @@ class LabIndexPage extends StatelessWidget {
 
   final Map<String, Widget> labPages = {
     "Dice Roller": const DiceRollerPage(),
-    "Meal App": CategoryMealWidget(),
-    "Expenses App": ExpensePage(),
+    "Meal App": const CategoryMealWidget(),
+    "Expenses App": const ExpensePage(),
     "Lab 1": const Lab1Page(),
     'Lab 2': const Lab2Page(),
-    'Lab 3': Lab3Page(),
-    'Lab 4': Lab4Page(),
+    'Lab 3': const Lab3Page(),
+    'Lab 4': const Lab4Page(),
     "Lab 5": Lab5Page(),
   };
 

@@ -59,8 +59,9 @@ class DataService {
 
   // Get user role
   UserRole getUserRole(String username) {
-    if (!_users.containsKey(username))
+    if (!_users.containsKey(username)) {
       return UserRole.regular; // Default role if user not found
+    }
     return _users[username]!.role;
   }
 

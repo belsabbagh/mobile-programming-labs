@@ -5,7 +5,7 @@ import 'package:mobile_labs/expenses_app/expenses_services.dart';
 class EditExpensePage extends StatefulWidget {
   final Expense expense;
 
-  EditExpensePage({required this.expense});
+  const EditExpensePage({super.key, required this.expense});
 
   @override
   _EditExpensePageState createState() => _EditExpensePageState();
@@ -41,7 +41,7 @@ class _EditExpensePageState extends State<EditExpensePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Edit Expense'),
+        title: const Text('Edit Expense'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -52,7 +52,7 @@ class _EditExpensePageState extends State<EditExpensePage> {
             children: [
               TextFormField(
                 controller: _titleController,
-                decoration: InputDecoration(labelText: 'Title'),
+                decoration: const InputDecoration(labelText: 'Title'),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
                     return 'Please enter a title';
@@ -62,7 +62,7 @@ class _EditExpensePageState extends State<EditExpensePage> {
               ),
               TextFormField(
                 controller: _amountController,
-                decoration: InputDecoration(labelText: 'Amount'),
+                decoration: const InputDecoration(labelText: 'Amount'),
                 keyboardType: TextInputType.number,
                 validator: (value) {
                   if (value == null || double.tryParse(value) == null) {
@@ -73,7 +73,7 @@ class _EditExpensePageState extends State<EditExpensePage> {
               ),
               TextFormField(
                 controller: _dateController,
-                decoration: InputDecoration(labelText: 'Date'),
+                decoration: const InputDecoration(labelText: 'Date'),
                 keyboardType: TextInputType.datetime,
                 validator: (value) {
                   if (value == null || DateTime.tryParse(value) == null) {
@@ -82,10 +82,10 @@ class _EditExpensePageState extends State<EditExpensePage> {
                   return null;
                 },
               ),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
               ElevatedButton(
                 onPressed: _submitForm,
-                child: Text('Save'),
+                child: const Text('Save'),
               ),
             ],
           ),

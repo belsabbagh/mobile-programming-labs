@@ -37,44 +37,44 @@ class MealPage extends StatelessWidget {
                       for (var ingredient in meal.ingredients)
                         Text('• $ingredient',
                             style:
-                                TextStyle(fontSize: 16, color: Colors.white)),
+                                const TextStyle(fontSize: 16, color: Colors.white)),
                     ]),
-                    SizedBox(height: 16),
+                    const SizedBox(height: 16),
                     _buildCard('Steps', [
                       for (int i = 0; i < meal.steps.length; i++)
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text('${i + 1}. ${meal.steps[i]}',
-                                style: TextStyle(
+                                style: const TextStyle(
                                     fontSize: 16, color: Colors.white)),
-                            SizedBox(height: 8),
+                            const SizedBox(height: 8),
                           ],
                         ),
                     ]),
-                    SizedBox(height: 16),
+                    const SizedBox(height: 16),
                     _buildCard('Properties', [
-                      SizedBox(height: 16),
+                      const SizedBox(height: 16),
                       BooleanAttribute(
                         label: 'Gluten Free',
                         value: meal.isGlutenFree,
                       ),
-                      SizedBox(height: 8),
+                      const SizedBox(height: 8),
                       BooleanAttribute(
                         label: 'Lactose Free',
                         value: meal.isLactoseFree,
                       ),
-                      SizedBox(height: 8),
+                      const SizedBox(height: 8),
                       BooleanAttribute(
                         label: 'Vegan',
                         value: meal.isVegan,
                       ),
-                      SizedBox(height: 8),
+                      const SizedBox(height: 8),
                       BooleanAttribute(
                         label: 'Vegetarian',
                         value: meal.isVegetarian,
                       ),
-                      SizedBox(height: 16),
+                      const SizedBox(height: 16),
                     ]),
                   ],
                 ),
@@ -99,12 +99,12 @@ class MealPage extends StatelessWidget {
           children: [
             Text(
               title,
-              style: TextStyle(
+              style: const TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
                   color: Colors.white),
             ),
-            SizedBox(height: 8),
+            const SizedBox(height: 8),
             ...content,
           ],
         ),
