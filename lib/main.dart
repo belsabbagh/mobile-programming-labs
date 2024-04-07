@@ -6,6 +6,8 @@ import 'package:mobile_labs/lab_pages/lab_2.dart';
 import 'package:mobile_labs/lab_pages/lab_3.dart';
 import 'package:mobile_labs/lab_pages/lab_4.dart';
 import 'package:mobile_labs/lab_pages/lab_5.dart';
+import 'package:mobile_labs/lab_pages/lab_6.dart';
+
 import 'package:mobile_labs/lab_pages/meal_app.dart';
 
 void main() {
@@ -40,6 +42,7 @@ class LabIndexPage extends StatelessWidget {
     'Lab 3': const Lab3Page(),
     'Lab 4': const Lab4Page(),
     "Lab 5": Lab5Page(),
+    "Lab 6": const Lab6Page(),
   };
 
   @override
