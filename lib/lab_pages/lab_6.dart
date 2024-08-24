@@ -4,14 +4,18 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:mobile_labs/firebase_options.dart';
 
 class AuthPage extends StatefulWidget {
+  const AuthPage({super.key});
+
   @override
   _AuthPageState createState() => _AuthPageState();
 }
 
 class AuthenticatedPage extends StatelessWidget {
+  const AuthenticatedPage({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
         body: Center(
       child: Text('Authenticated Page'),
     ));
@@ -33,7 +37,7 @@ class _AuthPageState extends State<AuthPage> {
       // Replace `HomePage()` with your desired home screen widget
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => AuthenticatedPage()),
+        MaterialPageRoute(builder: (context) => const AuthenticatedPage()),
       );
     } catch (e) {
       print('Failed to sign in: $e');
@@ -52,7 +56,7 @@ class _AuthPageState extends State<AuthPage> {
       // Replace `HomePage()` with your desired home screen widget
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => Lab6Page()),
+        MaterialPageRoute(builder: (context) => const Lab6Page()),
       );
     } catch (e) {
       print('Failed to sign up: $e');
@@ -65,34 +69,34 @@ class _AuthPageState extends State<AuthPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Firebase Auth Demo'),
+        title: const Text('Firebase Auth Demo'),
       ),
       body: Padding(
-        padding: EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(16.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             TextField(
               controller: _emailController,
-              decoration: InputDecoration(labelText: 'Email'),
+              decoration: const InputDecoration(labelText: 'Email'),
             ),
-            SizedBox(height: 16.0),
+            const SizedBox(height: 16.0),
             TextField(
               controller: _passwordController,
-              decoration: InputDecoration(labelText: 'Password'),
+              decoration: const InputDecoration(labelText: 'Password'),
               obscureText: true,
             ),
-            SizedBox(height: 16.0),
+            const SizedBox(height: 16.0),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
                 ElevatedButton(
                   onPressed: _signInWithEmailAndPassword,
-                  child: Text('Sign In'),
+                  child: const Text('Sign In'),
                 ),
                 ElevatedButton(
                   onPressed: _signUpWithEmailAndPassword,
-                  child: Text('Sign Up'),
+                  child: const Text('Sign Up'),
                 ),
               ],
             ),
@@ -129,7 +133,7 @@ class _Lab6PageState extends State<Lab6Page> {
       appBar: AppBar(
         title: const Text('Lab 6'),
       ),
-      body: AuthPage(),
+      body: const AuthPage(),
     );
   }
 }
